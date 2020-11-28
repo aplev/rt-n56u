@@ -2,7 +2,7 @@ name: Build MT7621-1
 
 on: 
   release:
-    types: [published]
+  #  types: [published]
     workflow_dispatch:
 #  push:
 #    tags:
@@ -13,7 +13,8 @@ on:
  #   - cron: 0 17 * * 4
 #  watch:
    # types: [started]
-
+  repository_dispatch:
+    types: 7621
 jobs:
   build:
     runs-on: ubuntu-18.04
